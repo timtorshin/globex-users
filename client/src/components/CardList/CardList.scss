@@ -1,0 +1,68 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__search {
+    margin-bottom: 50px;
+    position: relative;
+
+    &-input {
+      width: 100%;
+      border: 1px solid #A6A6A6;
+      border-radius: 24px;
+      padding: 10px 20px;
+      height: 48px;
+      outline: none;
+    }
+
+    &-icon {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 12px;
+      right: 22px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    width: 1240px;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .cards {
+    &__search {
+      width: 80%;
+      margin: 0 auto 50px;
+    }
+
+    &__list {
+      width: 840px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .cards {
+    &__search {
+      width: 90%;
+      margin: 0 auto 40px;
+    }
+
+    &__list {
+      justify-content: center;
+      width: 320px;
+    }
+  }
+}
