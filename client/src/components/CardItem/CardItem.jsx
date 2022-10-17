@@ -1,12 +1,15 @@
 import React from 'react';
 import './CardItem.scss';
+import CardPopup from '../CardPopup/CardPopup';
 import phoneIcon from '../../assets/phone-icon.png';
 import emailIcon from '../../assets/email-icon.png';
 
 const CardItem = ({ value }) => {
+  const [isCardOpen, setIsCardOpen] = React.useState(false);
+
   return (
     <>
-      <div className="card">
+      <div className="card" onClick={() => setIsCardOpen(true)}>
         <h2 className="card__title">{value.name}</h2>
         <div className="card__info">
           <div className="card__info-item">
@@ -19,6 +22,9 @@ const CardItem = ({ value }) => {
           </div>
         </div>
       </div>
+      {
+        isCardOpen ? <CardPopup value={value} onClickClose={() => setIsCardOpen(false)} /> : null
+      }
     </>
   );
 };
