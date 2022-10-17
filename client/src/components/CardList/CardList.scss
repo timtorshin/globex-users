@@ -39,3 +39,30 @@
     }
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .cards {
+    &__search {
+      width: 80%;
+      margin: 0 auto 50px;
+    }
+
+    &__list {
+      width: 840px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .cards {
+    &__search {
+      width: 90%;
+      margin: 0 auto 40px;
+    }
+
+    &__list {
+      justify-content: center;
+      width: 320px;
+    }
+  }
+}

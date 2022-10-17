@@ -40,3 +40,10 @@
     }
   }
 }
+
+@media screen and (max-width: 940px) {
+  .card {
+    width: 300px;
+    height: 240px;
+  }
+}

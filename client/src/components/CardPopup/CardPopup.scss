@@ -73,3 +73,21 @@
     }
   }
 }
+
+@media screen and (max-width: 680px) {
+  .popup {
+    &__container {
+      width: 300px;
+      height: 480px;
+      padding: 30px 20px 20px;
+    }
+
+    &__close {
+      top: -16px;
+      left: 142px;
+      width: 32px;
+      height: 32px;
+      font-size: 10px;
+    }
+  }
+}
